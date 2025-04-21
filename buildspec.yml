@@ -16,4 +16,4 @@ phases:
 
 artifacts:
   files:
-    - index.html
+    - /var/www/html/index.html
