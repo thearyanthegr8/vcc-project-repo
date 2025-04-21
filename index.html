@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudPipe | Modern CI/CD Virtualization</title>
+    <style>
+      :root {
+        --primary: #3b82f6;
+        --primary-light: #93c5fd;
+        --text: #1e293b;
+        --text-light: #64748b;
+        --bg: #f8fafc;
+        --accent: #f0f9ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--text-light);
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      nav a:hover {
+        color: var(--primary);
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 1.5rem;
+        text-align: center;
+        background: linear-gradient(to bottom, var(--bg), var(--accent));
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(90deg, var(--primary), #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        color: var(--text-light);
+        max-width: 36rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .cta {
+        background-color: var(--primary);
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25);
+      }
+
+      .cta:hover {
+        background-color: #2563eb;
+      }
+
+      .features {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s;
+      }
+
+      .feature:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-icon {
+        background-color: var(--accent);
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        color: var(--primary);
+      }
+
+      .feature h3 {
+        margin-bottom: 0.75rem;
+        font-size: 1.25rem;
+      }
+
+      .feature p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem 1.5rem;
+        color: var(--text-light);
+        font-size: 0.875rem;
+        background-color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M22 12.5A7 7 0 0 0 19 6a6 6 0 0 0-9-3.95A7 7 0 0 0 2 8.5c0 5.03 8 12.5 10 12.5a.77.77 0 0 0 .5-.2"
+          ></path>
+          <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+          <path
+            d="M19 12.5a2.5 2.5 0 0 1 0 5 2.5 2.5 0 0 1-5 0 2.5 2.5 0 0 1 5 0z"
+          ></path>
+        </svg>
+        CloudPipe
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Modern CI/CD Pipeline for Cloud Virtualization</h1>
+      <p>
+        Accelerate your development cycle with our streamlined virtualization
+        solution designed for modern cloud environments.
+      </p>
+      <a href="#" class="cta">Get Started</a>
+    </section>
+
+    <section id="features" class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect>
+            <path d="M7 7h.01"></path>
+            <path d="M12 7h.01"></path>
+            <path d="M17 7h.01"></path>
+            <path d="M7 12h.01"></path>
+            <path d="M12 12h.01"></path>
+            <path d="M17 12h.01"></path>
+            <path d="M7 17h.01"></path>
+            <path d="M12 17h.01"></path>
+            <path d="M17 17h.01"></path>
+          </svg>
+        </div>
+        <h3>Cloud Virtualization</h3>
+        <p>
+          Deploy applications in isolated virtual environments for better
+          resource utilization and scalability.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M12 21a9 9 0 0 1-9-9c0-3.4 1.9-6.9 4.7-9A9 9 0 0 1 12 21a9 9 0 0 1-9-9c0-3.4 1.9-6.9 4.7-9"
+            ></path>
+            <path
+              d="M12 21a9 9 0 0 0 9-9c0-3.4-1.9-6.9-4.7-9A9 9 0 0 0 12 21a9 9 0 0 0 9-9c0-3.4-1.9-6.9-4.7-9"
+            ></path>
+          </svg>
+        </div>
+        <h3>Continuous Integration</h3>
+        <p>
+          Automatically build, test, and validate your code changes with every
+          commit to ensure quality.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M13 22H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5"
+            ></path>
+            <circle cx="17" cy="17" r="3"></circle>
+            <path d="m22 22-3-3"></path>
+          </svg>
+        </div>
+        <h3>Continuous Deployment</h3>
+        <p>
+          Seamlessly deliver your applications to production with automated
+          deployment pipelines.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 CloudPipe | Your Modern CI/CD Virtualization Solution</p>
+    </footer>
+  </body>
+</html>
